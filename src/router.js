@@ -42,5 +42,27 @@ export default new Router({
       path: '/yi/distribute',
       component:()=>import('./views/Assets-management/yi/distribute/index.vue')
     }
+    ,
+    {
+      path: '/yi/collective',
+      component:()=>import('./views/Assets-management/yi/distribute/collective.vue')
+    }
+    ,
+    {
+      path: '/yi/untreated',
+      component:()=>import('./views/Assets-management/yi/distribute/untreated.vue')
+    },
+    {
+      path: '/yi/cancel',
+      component:()=>import('./views/Assets-management/yi/cancel/index.vue')
+    },
+    {
+      path: '/di/register',
+      component:()=>import('./views/Assets-management/di/register/index.vue')
+    },
+    {
+      path: '/di/remould',
+      component:()=>import('./views/Assets-management/di/remould/index.vue')
+    }
   ]
 })

@@ -26,12 +26,12 @@
                   <el-dropdown class="zi">易耗品</el-dropdown>
                   <router-link tag="span" to="/yi/storage">入库</router-link>
                   <router-link tag="span" to="/yi/distribute">分发</router-link>
-                  <router-link tag="span" to="">核销</router-link>
+                  <router-link tag="span" to="/yi/cancel">核销</router-link>
                   <br />
                   <br />
                   <el-dropdown class="zi">地产</el-dropdown>
-                  <router-link tag="span" to="">登记</router-link>
-                  <router-link tag="span" to="">改造</router-link>
+                  <router-link tag="span" to="/di/register">登记</router-link>
+                  <router-link tag="span" to="/di/remould">改造</router-link>
                   <router-link tag="span" to="">核销</router-link>
                   <br />
                   <br />

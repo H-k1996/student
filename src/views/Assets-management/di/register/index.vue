@@ -4,36 +4,57 @@
     <el-row>
       <el-col :span="24"
         ><div class="grid-content bg-purple-dark storageBox">
-          <p>易耗品管理>易耗品分布</p>
+          <p>地产管理>地产登记</p>
           <div class="baikuang">
-            <p class="ruku">分发记录</p>
-        <p>
+            <p class="ruku">地产记录</p>
+            <p>
+
+
 
 
 
 
 <!-- Form -->
 <el-button type="text" @click="dialogFormVisible = true">
-  <!-- <el-button type="danger" class="tianjia">+集体分布·</el-button> -->
-  <router-link to="/yi/collective" tag="button" class="tianjia">+集体分布</router-link>
+  <el-button type="danger" class="tianjia">+添加设备</el-button>
 </el-button>
+<el-dialog title="新增地产" :visible.sync="dialogFormVisible">
+  <el-form :model="form">
+    <el-form-item label="编码" :label-width="formLabelWidth">
+      <el-input v-model="form.name" autocomplete="off" style="width:220px"></el-input>
+    </el-form-item>
+     <el-form-item label="地产名称" :label-width="formLabelWidth">
+      <el-input v-model="form.date1" autocomplete="off" style="width:220px"></el-input>
+    </el-form-item>
+    <el-form-item label="土地名称" :label-width="formLabelWidth">
+      <el-input v-model="form.date2" autocomplete="off" style="width:220px"></el-input>m²
+    </el-form-item>
+    <el-form-item label="建筑面积" :label-width="formLabelWidth">
+      <el-input v-model="form.resource" autocomplete="off" style="width:220px"></el-input>
+    </el-form-item>
+       <el-form-item label="地址" :label-width="formLabelWidth">
+      <el-input v-model="form.desc" autocomplete="off" style="width:220px"></el-input>
+    </el-form-item>
 
 
-<el-badge :value="12" class="item">
-  <el-button @click="tiaozhuan" size="small" class="cankan">查看未处理的申请</el-button>
-</el-badge>
+
+
+    
+  </el-form>
+  <div slot="footer" class="dialog-footer">
+    <el-button type="primary" @click="dialogFormVisible = false">提交</el-button>
+  </div>
+</el-dialog>
+
+
+
 
               <el-input
                 v-model="input"
                 placeholder="请输入内容"
                 class="shuru"
               ></el-input>
-              <el-input
-                v-model="input2"
-                placeholder="领用人姓名"
-                class="shuru"
-              ></el-input>
-              <span class="ruku">分布时间:</span>
+              <span class="ruku">变更时间:</span>
               <el-date-picker
                 v-model="value1"
                 type="date"
@@ -43,17 +64,19 @@
               </el-date-picker>
               <span>---</span>
               <el-date-picker
-                v-model="value1"
+                v-model="value2"
                 type="date"
                 placeholder="选择日期"
                 class="riqi zuobian"
               >
               </el-date-picker>
               <el-button type="success" class="canxun">查询</el-button>
-              
+              <el-button type="success" class="orange zuotwo"
+                >批量导入</el-button
+              >
               <el-dropdown>
                 <el-button type="primary" class="orange zuothree">
-                  导出excel<i class="el-icon-arrow-down el-icon--right"></i>
+                  更多菜单<i class="el-icon-arrow-down el-icon--right"></i>
                 </el-button>
                 <el-dropdown-menu slot="dropdown">
                   <el-dropdown-item>导入全部</el-dropdown-item>
@@ -62,11 +85,18 @@
               </el-dropdown>
             </p>
             <div class="Table">
-              <DistributeTable></DistributeTable>
+              <RegisterTable></RegisterTable>
             </div>
             <div class="xiaobaikuang">
               <div id="zuo">
-                
+                <button
+                  type="button"
+                  class="mTop anniu"
+                  data-toggle="modal"
+                  data-target="#myModal"
+                >
+                  批量删除
+                </button>
               </div>
               <div id="you">
                 <el-pagination
@@ -86,25 +116,22 @@
 </template>
 <script>
 import Header from "../../../../components/Header/Index";
-import DistributeTable from "../../../../components/yiTable/distributeTable";
+import RegisterTable from "../../../../components/diTable/registerTable";
 export default {
   components: {
     Header,
-    DistributeTable,
+    RegisterTable,
   },
   data() {
     return {
-        input2:'',
       radio: '1',
       dialogTableVisible: false,
         dialogFormVisible: false,
         form: {
-            regionss:'',
           name: '',
           region: '',
           date1: '',
           date2: '',
-          data3:'',
           delivery: false,
           type: [],
           resource: '',
@@ -145,24 +172,14 @@ export default {
       value2: "",
     };
   },
-  methods: {
-    tiaozhuan(){
-      this.$router.push({
-        path:"/yi/untreated"
-      })
-    }
-  },
 };
 </script>
 <style scoped>
-.cankan{
-    height: 40px;
-    margin-left: 5px;
-    border: 1px solid #ff495b;
-    color: #ff495b;
-}
-.Table{
-    margin-left: 22px;
+.anniu {
+  background: none;
+  border: 1px solid #00b698;
+  color: #00b698;
+  padding: 5px;
 }
 .juzuo{
   margin-left: 50px;
@@ -176,25 +193,22 @@ export default {
   background: white;
 }
 .ruku {
-  padding: 15px;
+  padding: 20px;
 }
 .shuru {
-  width: 140px;
+  width: 250px;
   margin-left: 20px;
 }
 .tianjia {
   background: #ff495b;
-  margin-left: 10px;
-  padding: 13px;
-  border: none;
-  color: white;
+  margin-left: 20px;
 }
 .riqi {
   width: 150px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 .zuobian {
-  margin-left: 15px;
+  margin-left: 20px;
 }
 .canxun {
   background: #00b698;
@@ -204,10 +218,10 @@ export default {
   border: none;
 }
 .zuotwo {
-  margin-left: 10px;
+  margin-left: 120px;
 }
 .zuothree {
-  margin-left: 110px;
+  margin-left: 20px;
 }
 .xiaobaikuang {
   height: 50px;
@@ -223,20 +237,3 @@ export default {
   margin-left: 20px;
 }
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
