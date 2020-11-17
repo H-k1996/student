@@ -36,21 +36,21 @@
                   <br />
                   <br />
                   <el-dropdown class="zi">房产</el-dropdown>
-                  <router-link tag="span" to="">登记</router-link>
-                  <router-link tag="span" to="">维修</router-link>
-                  <router-link tag="span" to="">改造</router-link>
+                  <router-link tag="span" to="/house/register">登记</router-link>
+                  <router-link tag="span" to="/house/maintain">维修</router-link>
+                  <router-link tag="span" to="/house/remould">改造</router-link>
                   <router-link tag="span" to="">核销</router-link>
                   <br />
                   <br />
                   <el-dropdown class="zi">其他资产</el-dropdown>
-                  <router-link tag="span" to="">入库</router-link>
-                  <router-link tag="span" to="">挂失</router-link>
-                  <router-link tag="span" to="">保修</router-link>
-                  <router-link tag="span" to="">报废</router-link>
+                  <router-link tag="span" to="/qi/storage">入库</router-link>
+                  <router-link tag="span" to="/qi/reportthelossof">挂失</router-link>
+                  <router-link tag="span" to="/qi/warranty">保修</router-link>
+                  <router-link tag="span" to="/qi/scrap">报废</router-link>
                   <br />
                   <br />
                   <el-dropdown class="zi">项目</el-dropdown>
-                  <router-link tag="span" to="">录入</router-link>
+                  <router-link tag="span" to="/xiang/luru">录入</router-link>
                 </el-dropdown-menu>
               </el-dropdown>
             </div></el-col

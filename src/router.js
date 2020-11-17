@@ -63,6 +63,40 @@ export default new Router({
     {
       path: '/di/remould',
       component:()=>import('./views/Assets-management/di/remould/index.vue')
+    },
+    {
+      path: '/house/register',
+      component:()=>import('./views/Assets-management/house/register/index.vue')
+    },
+    {
+      path: '/house/maintain',
+      component:()=>import('./views/Assets-management/house/maintain/index.vue')
+    }
+    ,
+    {
+      path: '/house/remould',
+      component:()=>import('./views/Assets-management/house/remould/index.vue')
+    }
+    ,
+    {
+      path: '/qi/storage',
+      component:()=>import('./views/Assets-management/qi/storage/index.vue')
+    },
+    {
+      path: '/qi/reportthelossof',
+      component:()=>import('./views/Assets-management/qi/reportthelossof/index.vue')
+    },
+    {
+      path: '/qi/scrap',
+      component:()=>import('./views/Assets-management/qi/scrap/index.vue')
+    },
+    {
+      path: '/qi/warranty',
+      component:()=>import('./views/Assets-management/qi/warranty/index.vue')
+    },
+    {
+      path: '/xiang/luru',
+      component:()=>import('./views/Assets-management/xiang/luru/index.vue')
     }
   ]
 })
