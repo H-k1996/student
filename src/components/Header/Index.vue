@@ -60,16 +60,16 @@
               <span class="el-dropdown-link baizi"> 申请&审批 </span>
               <el-dropdown-menu slot="dropdown" class="shenlvse">
                 <el-dropdown class="zi">申请</el-dropdown>
-                <router-link tag="span" to="">教学设备借入申请</router-link>
-                <router-link tag="span" to="">易耗品领用申请</router-link>
-                <router-link tag="span" to="">采购申请</router-link>
+                <router-link tag="span" to="/shenqing/jiao">教学设备借入申请</router-link>
+                <router-link tag="span" to="/shenqing/yi">易耗品领用申请</router-link>
+                <router-link tag="span" to="/shenqing/cai">采购申请</router-link>
                 <br />
                 <br />
 
                 <el-dropdown class="zi">审批</el-dropdown>
-                <router-link tag="span" to="">教学设备借入申请</router-link>
-                <router-link tag="span" to="">易耗品领用申请</router-link>
-                <router-link tag="span" to="">采购申请</router-link>
+                <router-link tag="span" to="/shenpi/jiao">教学设备借入申请</router-link>
+                <router-link tag="span" to="/shenpi/yi">易耗品领用申请</router-link>
+                <router-link tag="span" to="/shenpi/cai">采购申请</router-link>
               </el-dropdown-menu>
             </el-dropdown>
           </el-col>

@@ -97,6 +97,44 @@ export default new Router({
     {
       path: '/xiang/luru',
       component:()=>import('./views/Assets-management/xiang/luru/index.vue')
+    },
+    {
+      path: '/shenqing/jiao',
+      component:()=>import('./views/Apply-for-approval/shenqing/jiao.vue')
+    },
+    {
+      path: '/shenqing/jiaoTwo',
+      component:()=>import('./views/Apply-for-approval/shenqing/jiaoTwo.vue')
+    },
+    {
+      path: '/shenqing/yi',
+      component:()=>import('./views/Apply-for-approval/shenqing/yi.vue')
+    },
+    {
+      path: '/shenqing/yiTwo',
+      component:()=>import('./views/Apply-for-approval/shenqing/yiTwo.vue')
+    },
+    {
+      path: '/shenqing/cai',
+      component:()=>import('./views/Apply-for-approval/shenqing/cai.vue')
+    },
+    {
+      path: '/shenqing/caiTow',
+      component:()=>import('./views/Apply-for-approval/shenqing/caiTow.vue')
+    }
+    ,
+    {
+      path: '/shenpi/jiao',
+      component:()=>import('./views/Apply-for-approval/shenpi/jiao.vue')
+    }
+    ,
+    {
+      path: '/shenpi/yi',
+      component:()=>import('./views/Apply-for-approval/shenpi/yi.vue')
+    },
+    {
+      path: '/shenpi/cai',
+      component:()=>import('./views/Apply-for-approval/shenpi/cai.vue')
     }
   ]
 })
