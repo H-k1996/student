@@ -78,9 +78,9 @@
               <span class="el-dropdown-link baizi"> 统计 </span>
               <el-dropdown-menu slot="dropdown" class="shenlvse">
                 <el-dropdown class="zi">申请</el-dropdown>
-                <router-link tag="span" to="">教学设备借入申请</router-link>
-                <router-link tag="span" to="">易耗品领用申请</router-link>
-                <router-link tag="span" to="">采购申请</router-link>
+                <router-link tag="span" to="/statistics/ku">库存</router-link>
+                <router-link tag="span" to="/statistics/tai">台账</router-link>
+                <router-link tag="span" to="/statistics/pan">盘点</router-link>
                 <br />
                 <br />
               </el-dropdown-menu>
